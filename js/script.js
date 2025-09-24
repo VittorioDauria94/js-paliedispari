@@ -4,15 +4,19 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 NON USARE SPLIT E REVERSE!!! TUTTO CON CICLO FOR */
 
-// const wordStr = prompt("Inserisci una parola");
-// let message;
-// if (isPalindrome(wordStr)) {
-//     message = "La parola che hai inserito è palindroma";
-// } else {
-//     message = "La tua parola non è palindroma";
-// }
+const wordStr = prompt("Inserisci una parola");
+let message = "";
 
-// console.log(message);
+if (!isNaN(wordStr) || wordStr === null || wordStr.length < 3) {
+    message = "Errore: la parola non può essere un numero e deve avere almeno 3 caratteri. Ricarica la pagina.";
+} else {
+    if (isPalindrome(wordStr)) {
+        message = "La parola che hai inserito è palindroma";
+    } else {
+        message = "La tua parola non è palindroma";
+    }
+}
+    console.log(message);
 
 
 /** Esercizio 2
@@ -23,18 +27,18 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
-const evenOrOdd = prompt("Il numero finale sarà pari o dispari?");
-const numberChoise = parseInt(prompt("scegli un numero da 1 a 6"));
-const randomDiceNumber = generateRandomNumber(1, 6);
-const sumOfNumbers = numberChoise + randomDiceNumber;
-let message = "";
+// const evenOrOdd = prompt("Il numero finale sarà pari o dispari?");
+// const numberChoise = parseInt(prompt("scegli un numero da 1 a 6"));
+// const randomDiceNumber = generateRandomNumber(1, 6);
+// const sumOfNumbers = numberChoise + randomDiceNumber;
+// let message = "";
 
-if (isEven(sumOfNumbers) && evenOrOdd === "pari" || !isEven(sumOfNumbers) && evenOrOdd === "dispari") {
-    message = "Hai vinto";
-} else {
-    message = "Hai perso"
-}
+// if (isEven(sumOfNumbers) && evenOrOdd === "pari" || !isEven(sumOfNumbers) && evenOrOdd === "dispari") {
+//     message = "Hai vinto";
+// } else {
+//     message = "Hai perso"
+// }
 
-console.log(randomDiceNumber);
-console.log(sumOfNumbers);
-console.log(message);
+// console.log(randomDiceNumber);
+// console.log(sumOfNumbers);
+// console.log(message);
